@@ -45,6 +45,7 @@
 		<nav class="nav">
 			<a href="{base}/" class:active={page.url.pathname === `${base}/`}>Главная</a>
 			<a href="{base}/gaultheria" class:active={page.url.pathname === `${base}/gaultheria`}>Гаультерия</a>
+			<a href="{base}/lemongrass" class:active={page.url.pathname === `${base}/lemongrass`}>Лемонграсс</a>
 		</nav>
 	</header>
 

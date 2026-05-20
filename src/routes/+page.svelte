@@ -11,6 +11,14 @@
 			available: true
 		},
 		{
+			slug: 'lemongrass',
+			name: 'Лемонграсс',
+			latin: 'Cymbopogon flexuosus',
+			note: 'Свежий цитрусово-травяной, очищающий и тонизирующий',
+			tags: ['антибактериальное', 'очищение', 'тонус'],
+			available: true
+		},
+		{
 			slug: '',
 			name: 'Лаванда',
 			latin: 'Lavandula angustifolia',
