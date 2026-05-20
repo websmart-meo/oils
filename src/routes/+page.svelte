@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import Durga from '$lib/emblems/Durga.svelte';
+	import Shiva from '$lib/emblems/Shiva.svelte';
 
 	const oils = [
 		{
@@ -8,7 +10,10 @@
 			latin: 'Gaultheria procumbens',
 			note: 'Освежающий, прохладно-камфорный, с лёгкой древесной сладостью',
 			tags: ['обезболивающее', 'противовоспалительное', 'заземление'],
-			available: true
+			available: true,
+			deity: 'Дурга',
+			emblem: Durga,
+			color: '#9C2D3F'
 		},
 		{
 			slug: 'lemongrass',
@@ -16,7 +21,10 @@
 			latin: 'Cymbopogon flexuosus',
 			note: 'Свежий цитрусово-травяной, очищающий и тонизирующий',
 			tags: ['антибактериальное', 'очищение', 'тонус'],
-			available: true
+			available: true,
+			deity: 'Шива',
+			emblem: Shiva,
+			color: '#0E8A56'
 		},
 		{
 			slug: '',
@@ -24,7 +32,10 @@
 			latin: 'Lavandula angustifolia',
 			note: 'Тёплый цветочный аромат с травянистыми нотами',
 			tags: ['успокаивающее', 'сон'],
-			available: false
+			available: false,
+			deity: 'Сарасвати',
+			emblem: null,
+			color: '#8E6AC8'
 		},
 		{
 			slug: '',
@@ -32,7 +43,10 @@
 			latin: 'Eucalyptus globulus',
 			note: 'Свежий, ментоловый, очищающий',
 			tags: ['дыхание', 'тонус'],
-			available: false
+			available: false,
+			deity: 'Хануман',
+			emblem: null,
+			color: '#0FB5AE'
 		}
 	];
 </script>
@@ -74,19 +88,13 @@
 
 	<div class="grid">
 		{#each oils as oil (oil.name)}
-			{#if oil.available}
+			{#if oil.available && oil.emblem}
+				{@const Emblem = oil.emblem}
 				<a class="card" href="{base}/{oil.slug}">
-					<div class="card-icon" aria-hidden="true">
-						<svg viewBox="0 0 24 24" width="32" height="32">
-							<path
-								d="M12 2c-1.5 3-4 5-4 9a4 4 0 0 0 8 0c0-4-2.5-6-4-9Z"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="1.4"
-								stroke-linejoin="round"
-							/>
-						</svg>
+					<div class="emblem" style="color: {oil.color}; --emblem-color: {oil.color};">
+						<Emblem />
 					</div>
+					<p class="deity">{oil.deity}</p>
 					<h3>{oil.name}</h3>
 					<p class="latin">{oil.latin}</p>
 					<p class="note">{oil.note}</p>
@@ -99,17 +107,39 @@
 				</a>
 			{:else}
 				<div class="card card-disabled">
-					<div class="card-icon" aria-hidden="true">
-						<svg viewBox="0 0 24 24" width="32" height="32">
-							<path
-								d="M12 2c-1.5 3-4 5-4 9a4 4 0 0 0 8 0c0-4-2.5-6-4-9Z"
+					<div class="emblem emblem-placeholder" aria-hidden="true">
+						<svg viewBox="0 0 100 100" width="100%" height="100%">
+							<circle
+								cx="50"
+								cy="50"
+								r="42"
 								fill="none"
 								stroke="currentColor"
-								stroke-width="1.4"
-								stroke-linejoin="round"
+								stroke-width="0.9"
+								opacity="0.4"
 							/>
+							<circle
+								cx="50"
+								cy="50"
+								r="46"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="0.6"
+								opacity="0.3"
+							/>
+							<text
+								x="50"
+								y="58"
+								text-anchor="middle"
+								font-family="Cormorant Garamond, serif"
+								font-style="italic"
+								font-size="14"
+								fill="currentColor"
+								opacity="0.5">скоро</text
+							>
 						</svg>
 					</div>
+					<p class="deity muted">{oil.deity}</p>
 					<h3>{oil.name}</h3>
 					<p class="latin">{oil.latin}</p>
 					<p class="note">{oil.note}</p>
@@ -288,14 +318,57 @@
 		cursor: not-allowed;
 	}
 
-	.card-icon {
+	.emblem {
+		width: 84px;
+		height: 84px;
+		margin: 0 auto 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: var(--card-soft);
+		padding: 14px;
+		transition: transform 0.4s ease, box-shadow 0.4s ease;
+	}
+
+	.card:not(.card-disabled):hover .emblem {
+		transform: scale(1.05);
+		box-shadow: 0 6px 18px rgba(60, 70, 50, 0.08);
+	}
+
+	.emblem :global(svg) {
+		width: 100%;
+		height: 100%;
+	}
+
+	.emblem-placeholder {
+		color: var(--ink-muted);
+	}
+
+	.deity {
+		text-align: center;
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: 0.8rem;
+		letter-spacing: 0.24em;
+		text-transform: uppercase;
 		color: var(--accent);
-		margin-bottom: 0.5rem;
+		margin: 0 0 0.25rem;
+	}
+
+	.deity.muted {
+		color: var(--ink-muted);
 	}
 
 	.card h3 {
 		font-size: 1.5rem;
 		color: var(--ink);
+		text-align: center;
+	}
+
+	.card .latin,
+	.card .note {
+		text-align: center;
 	}
 
 	.card .latin {
@@ -315,6 +388,7 @@
 	.tags {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 0.4rem;
 		margin-bottom: 1rem;
 	}
@@ -330,6 +404,7 @@
 
 	.card-arrow {
 		margin-top: auto;
+		text-align: center;
 		color: var(--accent-bright);
 		font-size: 0.9rem;
 		font-weight: 500;

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import Durga from '$lib/emblems/Durga.svelte';
 
 	type Item = { title: string; text: string };
 
@@ -167,6 +168,10 @@
 
 		<div class="hero-grid">
 			<div class="hero-text">
+				<div class="deity-seal" style="color: #9C2D3F;">
+					<Durga />
+					<span class="deity-name">Дурга</span>
+				</div>
 				<span class="eyebrow">эфирное масло · паровая дистилляция</span>
 				<h1>Гаультерия</h1>
 				<p class="latin">Gaultheria procumbens</p>
@@ -436,6 +441,28 @@
 		text-transform: uppercase;
 		color: var(--accent);
 		margin-bottom: 1.25rem;
+	}
+
+	.deity-seal {
+		display: flex;
+		align-items: center;
+		gap: 0.85rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.deity-seal :global(svg) {
+		width: 56px;
+		height: 56px;
+		flex-shrink: 0;
+	}
+
+	.deity-name {
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: 1rem;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: currentColor;
 	}
 
 	.hero h1 {
