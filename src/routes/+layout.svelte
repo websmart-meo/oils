@@ -70,24 +70,25 @@
 
 <style>
 	:global(:root) {
-		--bg: #3d4a3a;
-		--bg-deep: #2f3a2d;
-		--card: #4a5747;
-		--card-hover: #536052;
-		--border: #6b7a64;
-		--ink: #f0e9d2;
-		--ink-soft: #d5cdb5;
-		--ink-muted: #a8a892;
-		--accent: #d4c47a;
-		--accent-bright: #ecd98f;
-		--danger: #d99a7a;
+		--bg: #f5f1e7;
+		--bg-deep: #ede7d6;
+		--card: #ffffff;
+		--card-hover: #fbf8ee;
+		--card-soft: #f1ebda;
+		--border: #d8d0bd;
+		--ink: #2a2f26;
+		--ink-soft: #4f5448;
+		--ink-muted: #87826f;
+		--accent: #7a8a6a;
+		--accent-bright: #5d7048;
+		--danger: #b06a52;
 
 		--font-display: 'Cormorant Garamond', 'Georgia', serif;
 		--font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
 		--radius: 14px;
 		--radius-lg: 22px;
-		--shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+		--shadow: 0 12px 32px rgba(60, 70, 50, 0.08);
 	}
 
 	:global(*),
@@ -132,8 +133,8 @@
 		display: flex;
 		flex-direction: column;
 		background:
-			radial-gradient(1200px 600px at 80% -10%, rgba(212, 196, 122, 0.08), transparent 60%),
-			radial-gradient(900px 500px at -10% 30%, rgba(212, 196, 122, 0.05), transparent 60%),
+			radial-gradient(1100px 500px at 85% -8%, rgba(122, 138, 106, 0.07), transparent 60%),
+			radial-gradient(900px 500px at -8% 20%, rgba(176, 106, 82, 0.04), transparent 60%),
 			linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
 	}
 
@@ -141,13 +142,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1.5rem clamp(1.25rem, 4vw, 3rem);
-		border-bottom: 1px solid rgba(212, 196, 122, 0.18);
-		position: sticky;
-		top: 0;
-		z-index: 10;
-		backdrop-filter: blur(8px);
-		background: rgba(47, 58, 45, 0.78);
+		padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
+		border-bottom: 1px solid var(--border);
 	}
 
 	.brand {
@@ -164,7 +160,7 @@
 		width: 42px;
 		height: 42px;
 		border-radius: 50%;
-		border: 1px solid rgba(212, 196, 122, 0.4);
+		border: 1px solid var(--accent);
 		color: var(--accent-bright);
 	}
 
@@ -232,7 +228,7 @@
 		text-align: center;
 		color: var(--ink-muted);
 		font-size: 0.85rem;
-		border-top: 1px solid rgba(212, 196, 122, 0.12);
+		border-top: 1px solid var(--border);
 	}
 
 	.footer-ornament {

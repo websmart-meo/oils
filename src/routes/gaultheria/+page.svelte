@@ -400,7 +400,7 @@
 
 	.hero {
 		padding: 2.5rem 0 4rem;
-		border-bottom: 1px solid rgba(212, 196, 122, 0.15);
+		border-bottom: 1px solid rgba(122, 138, 106, 0.15);
 	}
 
 	.back-link {
@@ -473,8 +473,8 @@
 		font-size: 0.78rem;
 		padding: 0.4rem 0.9rem;
 		border-radius: 999px;
-		background: rgba(212, 196, 122, 0.14);
-		border: 1px solid rgba(212, 196, 122, 0.3);
+		background: rgba(122, 138, 106, 0.14);
+		border: 1px solid rgba(122, 138, 106, 0.3);
 		color: var(--ink-soft);
 		letter-spacing: 0.04em;
 	}
@@ -543,7 +543,7 @@
 		color: var(--accent-bright);
 		font-family: var(--font-display);
 		padding: 0.8rem;
-		border: 1px solid rgba(212, 196, 122, 0.5);
+		border: 1px solid rgba(122, 138, 106, 0.5);
 		border-radius: 6px;
 		background: rgba(0, 0, 0, 0.2);
 	}
@@ -575,7 +575,7 @@
 
 	.section {
 		padding: 4rem 0;
-		border-bottom: 1px solid rgba(212, 196, 122, 0.1);
+		border-bottom: 1px solid rgba(122, 138, 106, 0.1);
 	}
 
 	.section:last-of-type {
@@ -583,7 +583,7 @@
 	}
 
 	.section-alt {
-		background: linear-gradient(180deg, transparent, rgba(212, 196, 122, 0.03), transparent);
+		background: linear-gradient(180deg, transparent, rgba(122, 138, 106, 0.03), transparent);
 	}
 
 	.section-mystic {
@@ -596,7 +596,7 @@
 		inset: 0;
 		background: radial-gradient(
 			ellipse at center,
-			rgba(212, 196, 122, 0.05),
+			rgba(122, 138, 106, 0.05),
 			transparent 70%
 		);
 		pointer-events: none;
@@ -641,14 +641,14 @@
 
 	.prop-card {
 		background: var(--card);
-		border: 1px solid rgba(212, 196, 122, 0.18);
+		border: 1px solid rgba(122, 138, 106, 0.18);
 		border-radius: var(--radius);
 		padding: 1.5rem;
 		transition: all 0.3s ease;
 	}
 
 	.prop-card:hover {
-		border-color: rgba(212, 196, 122, 0.4);
+		border-color: rgba(122, 138, 106, 0.4);
 		transform: translateY(-2px);
 		box-shadow: var(--shadow);
 	}
@@ -676,17 +676,17 @@
 	}
 
 	.prop-card-soft {
-		background: rgba(74, 87, 71, 0.5);
-		border-color: rgba(212, 196, 122, 0.12);
+		background: var(--card-soft);
+		border-color: rgba(122, 138, 106, 0.2);
 	}
 
 	.prop-card-mystic {
 		background: linear-gradient(
 			135deg,
-			rgba(74, 87, 71, 0.85) 0%,
-			rgba(60, 72, 58, 0.85) 100%
+			var(--card) 0%,
+			var(--card-soft) 100%
 		);
-		border-color: rgba(212, 196, 122, 0.25);
+		border-color: rgba(122, 138, 106, 0.3);
 		position: relative;
 	}
 
@@ -704,7 +704,7 @@
 		display: flex;
 		gap: 1.25rem;
 		padding: 1.25rem 0;
-		border-bottom: 1px solid rgba(212, 196, 122, 0.08);
+		border-bottom: 1px solid rgba(122, 138, 106, 0.08);
 	}
 
 	.usage-num {
@@ -736,7 +736,7 @@
 		background: linear-gradient(
 			180deg,
 			transparent,
-			rgba(217, 154, 122, 0.04),
+			rgba(176, 106, 82, 0.05),
 			transparent
 		);
 	}
@@ -744,8 +744,8 @@
 	.warning-card {
 		display: flex;
 		gap: 1rem;
-		background: rgba(74, 87, 71, 0.6);
-		border: 1px solid rgba(217, 154, 122, 0.25);
+		background: #fdf6f1;
+		border: 1px solid rgba(176, 106, 82, 0.22);
 		border-left: 3px solid var(--danger);
 		border-radius: var(--radius);
 		padding: 1.25rem 1.5rem;
@@ -788,7 +788,7 @@
 
 	.storage-card {
 		background: var(--card);
-		border: 1px solid rgba(212, 196, 122, 0.18);
+		border: 1px solid rgba(122, 138, 106, 0.18);
 		border-radius: var(--radius);
 		padding: 1.75rem;
 	}
@@ -815,7 +815,7 @@
 
 	.info-card {
 		background: var(--card);
-		border: 1px solid rgba(212, 196, 122, 0.18);
+		border: 1px solid rgba(122, 138, 106, 0.18);
 		border-radius: var(--radius);
 		padding: 0.5rem 1.5rem;
 		margin: 0;
@@ -826,7 +826,7 @@
 		justify-content: space-between;
 		gap: 1rem;
 		padding: 1rem 0;
-		border-bottom: 1px solid rgba(212, 196, 122, 0.1);
+		border-bottom: 1px solid rgba(122, 138, 106, 0.1);
 	}
 
 	.info-row:last-child {
@@ -850,8 +850,8 @@
 	}
 
 	.manufacturer {
-		background: rgba(74, 87, 71, 0.45);
-		border: 1px solid rgba(212, 196, 122, 0.12);
+		background: var(--card-soft);
+		border: 1px solid rgba(122, 138, 106, 0.2);
 		border-radius: var(--radius);
 		padding: 1.5rem 1.75rem;
 		text-align: center;

@@ -191,19 +191,20 @@
 	}
 
 	.btn-primary {
-		background: var(--accent);
-		color: var(--bg-deep);
-		border: 1px solid var(--accent);
+		background: var(--accent-bright);
+		color: #fff;
+		border: 1px solid var(--accent-bright);
 	}
 
 	.btn-primary:hover {
-		background: var(--accent-bright);
-		color: var(--bg-deep);
+		background: #4a5c39;
+		border-color: #4a5c39;
+		color: #fff;
 		transform: translateY(-1px);
 	}
 
 	.btn-ghost {
-		border: 1px solid rgba(212, 196, 122, 0.35);
+		border: 1px solid rgba(122, 138, 106, 0.35);
 		color: var(--ink);
 	}
 
@@ -263,7 +264,7 @@
 
 	.card {
 		background: var(--card);
-		border: 1px solid rgba(212, 196, 122, 0.18);
+		border: 1px solid rgba(122, 138, 106, 0.18);
 		border-radius: var(--radius-lg);
 		padding: 2rem 1.75rem;
 		color: var(--ink);
@@ -277,7 +278,7 @@
 
 	.card:not(.card-disabled):hover {
 		background: var(--card-hover);
-		border-color: rgba(212, 196, 122, 0.4);
+		border-color: rgba(122, 138, 106, 0.4);
 		transform: translateY(-3px);
 		box-shadow: var(--shadow);
 	}
@@ -322,7 +323,7 @@
 		font-size: 0.72rem;
 		padding: 0.25rem 0.7rem;
 		border-radius: 999px;
-		background: rgba(212, 196, 122, 0.12);
+		background: rgba(122, 138, 106, 0.12);
 		color: var(--ink-soft);
 		letter-spacing: 0.04em;
 	}
