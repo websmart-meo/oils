@@ -12,7 +12,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
 		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500;600&display=swap"
 	/>
 </svelte:head>
 
@@ -70,25 +70,26 @@
 
 <style>
 	:global(:root) {
-		--bg: #f5f1e7;
-		--bg-deep: #ede7d6;
+		--bg: #f4efe6;
+		--bg-deep: #ebe4d4;
 		--card: #ffffff;
-		--card-hover: #fbf8ee;
-		--card-soft: #f1ebda;
-		--border: #d8d0bd;
-		--ink: #2a2f26;
-		--ink-soft: #4f5448;
-		--ink-muted: #87826f;
-		--accent: #7a8a6a;
-		--accent-bright: #5d7048;
-		--danger: #b06a52;
+		--card-hover: #faf6ec;
+		--card-soft: #efe6d3;
+		--border: #d6cbb3;
+		--ink: #1d1a15;
+		--ink-soft: #5a534a;
+		--ink-muted: #928876;
+		--accent: #a47864;
+		--accent-bright: #7a5642;
+		--danger: #9c4e3e;
 
-		--font-display: 'Cormorant Garamond', 'Georgia', serif;
-		--font-body: 'Inter', system-ui, -apple-system, sans-serif;
+		--font-display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
+		--font-body:
+			'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-		--radius: 14px;
-		--radius-lg: 22px;
-		--shadow: 0 12px 32px rgba(60, 70, 50, 0.08);
+		--radius: 12px;
+		--radius-lg: 18px;
+		--shadow: 0 12px 32px rgba(60, 50, 40, 0.07);
 	}
 
 	:global(*),
@@ -133,8 +134,8 @@
 		display: flex;
 		flex-direction: column;
 		background:
-			radial-gradient(1100px 500px at 85% -8%, rgba(122, 138, 106, 0.07), transparent 60%),
-			radial-gradient(900px 500px at -8% 20%, rgba(176, 106, 82, 0.04), transparent 60%),
+			radial-gradient(1100px 500px at 85% -8%, rgba(164, 120, 100, 0.07), transparent 60%),
+			radial-gradient(900px 500px at -8% 20%, rgba(156, 78, 62, 0.04), transparent 60%),
 			linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
 	}
 
@@ -171,19 +172,20 @@
 	}
 
 	.brand-text strong {
-		font-family: var(--font-display);
-		font-size: 1.35rem;
-		font-weight: 600;
-		letter-spacing: 0.12em;
+		font-family: var(--font-body);
+		font-size: 0.9rem;
+		font-weight: 500;
+		letter-spacing: 0.34em;
 		text-transform: uppercase;
-		color: var(--accent-bright);
+		color: var(--ink);
 	}
 
 	.brand-text em {
-		font-style: italic;
-		font-size: 0.78rem;
+		font-style: normal;
+		font-size: 0.72rem;
 		color: var(--ink-muted);
-		letter-spacing: 0.02em;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
 	}
 
 	.nav {

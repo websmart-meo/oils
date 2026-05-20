@@ -432,12 +432,12 @@
 	}
 
 	.lemon {
-		--accent-hue: #b08a3a;
+		--accent-hue: #0E8A56;
 	}
 
 	.hero {
 		padding: 2.5rem 0 4rem;
-		border-bottom: 1px solid rgba(122, 138, 106, 0.15);
+		border-bottom: 1px solid rgba(164, 120, 100, 0.15);
 	}
 
 	.back-link {
@@ -489,29 +489,32 @@
 	}
 
 	.deity-name {
-		font-family: var(--font-display);
-		font-style: italic;
-		font-size: 1rem;
-		letter-spacing: 0.18em;
+		font-family: var(--font-body);
+		font-size: 0.78rem;
+		font-weight: 500;
+		letter-spacing: 0.34em;
 		text-transform: uppercase;
 		color: currentColor;
 	}
 
 	.hero h1 {
-		font-size: clamp(3rem, 7vw, 5.5rem);
-		font-style: italic;
-		font-weight: 500;
+		font-family: var(--font-display);
+		font-size: clamp(3.5rem, 8vw, 6.5rem);
+		font-weight: 400;
+		letter-spacing: -0.02em;
 		color: var(--ink);
-		line-height: 1;
-		margin-bottom: 0.5rem;
+		line-height: 0.95;
+		margin: 0 0 0.75rem;
 	}
 
 	.hero .latin {
-		font-family: var(--font-display);
-		font-style: italic;
-		font-size: 1.3rem;
-		color: var(--accent-bright);
-		margin: 0 0 1.5rem;
+		font-family: var(--font-body);
+		font-size: 0.82rem;
+		font-weight: 400;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--accent);
+		margin: 0 0 1.75rem;
 	}
 
 	.lede {
@@ -532,8 +535,8 @@
 		font-size: 0.78rem;
 		padding: 0.4rem 0.9rem;
 		border-radius: 999px;
-		background: rgba(170, 145, 60, 0.12);
-		border: 1px solid rgba(170, 145, 60, 0.3);
+		background: rgba(164, 120, 100, 0.12);
+		border: 1px solid rgba(164, 120, 100, 0.3);
 		color: var(--ink-soft);
 		letter-spacing: 0.04em;
 	}
@@ -551,7 +554,7 @@
 		inset: -10%;
 		background: radial-gradient(
 			ellipse at center,
-			rgba(170, 145, 60, 0.15),
+			rgba(164, 120, 100, 0.15),
 			transparent 60%
 		);
 		z-index: 0;
@@ -583,15 +586,15 @@
 	.bottle-cap {
 		width: 50px;
 		height: 26px;
-		background: linear-gradient(180deg, #7a6f44 0%, #463f25 100%);
+		background: linear-gradient(180deg, #6d5a3a 0%, #3a2f1e 100%);
 		border-radius: 6px 6px 3px 3px;
-		border-top: 1px solid #9c8e58;
+		border-top: 1px solid #8a754a;
 	}
 
 	.bottle-neck {
 		width: 30px;
 		height: 18px;
-		background: linear-gradient(180deg, #2d3a26 0%, #1c2618 100%);
+		background: linear-gradient(180deg, #2a1f15 0%, #1a120c 100%);
 		border-left: 1px solid rgba(255, 255, 255, 0.05);
 		border-right: 1px solid rgba(0, 0, 0, 0.3);
 	}
@@ -600,9 +603,9 @@
 		position: relative;
 		width: 130px;
 		height: 200px;
-		background: linear-gradient(135deg, #303d29 0%, #1d251a 60%, #2c3825 100%);
+		background: linear-gradient(135deg, #3a2820 0%, #1d130d 60%, #2e1f18 100%);
 		border-radius: 12px 12px 18px 18px;
-		border: 1px solid rgba(170, 145, 60, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.06);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -611,26 +614,30 @@
 
 	.bottle-label {
 		text-align: center;
-		color: var(--accent-bright);
-		font-family: var(--font-display);
-		padding: 0.8rem;
-		border: 1px solid rgba(170, 145, 60, 0.55);
-		border-radius: 6px;
-		background: rgba(0, 0, 0, 0.22);
+		color: #efe6d3;
+		font-family: var(--font-body);
+		padding: 0.7rem 1rem;
+		border: 1px solid rgba(14, 138, 86, 0.7);
+		border-radius: 4px;
+		background: rgba(0, 0, 0, 0.25);
 	}
 
 	.bottle-label span {
 		display: block;
-		font-size: 1.05rem;
-		font-weight: 600;
-		letter-spacing: 0.08em;
+		font-size: 0.78rem;
+		font-weight: 500;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
 	}
 
 	.bottle-label em {
-		font-size: 0.68rem;
-		font-style: italic;
-		color: var(--ink-muted);
-		letter-spacing: 0.04em;
+		display: block;
+		font-style: normal;
+		font-size: 0.58rem;
+		color: #a8a08e;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		margin-top: 0.25rem;
 	}
 
 	.bottle-shine {
@@ -646,7 +653,7 @@
 
 	.section {
 		padding: 4rem 0;
-		border-bottom: 1px solid rgba(122, 138, 106, 0.1);
+		border-bottom: 1px solid rgba(164, 120, 100, 0.1);
 	}
 
 	.section:last-of-type {
@@ -654,7 +661,7 @@
 	}
 
 	.section-alt {
-		background: linear-gradient(180deg, transparent, rgba(170, 145, 60, 0.04), transparent);
+		background: linear-gradient(180deg, transparent, rgba(164, 120, 100, 0.04), transparent);
 	}
 
 	.section-mystic {
@@ -667,7 +674,7 @@
 		inset: 0;
 		background: radial-gradient(
 			ellipse at center,
-			rgba(170, 145, 60, 0.06),
+			rgba(164, 120, 100, 0.06),
 			transparent 70%
 		);
 		pointer-events: none;
@@ -680,18 +687,22 @@
 
 	.section-num {
 		display: inline-block;
-		font-family: var(--font-display);
-		font-size: 0.85rem;
+		font-family: var(--font-body);
+		font-size: 0.7rem;
+		font-weight: 500;
 		color: var(--accent);
-		letter-spacing: 0.2em;
-		margin-bottom: 0.5rem;
+		letter-spacing: 0.32em;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
 	}
 
 	.section-head h2 {
-		font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+		font-family: var(--font-display);
+		font-size: clamp(2rem, 4.2vw, 3rem);
+		font-weight: 400;
+		letter-spacing: -0.015em;
 		color: var(--ink);
-		font-style: italic;
-		font-weight: 500;
+		line-height: 1.05;
 		margin-bottom: 0.5rem;
 	}
 
@@ -712,14 +723,14 @@
 
 	.prop-card {
 		background: var(--card);
-		border: 1px solid rgba(122, 138, 106, 0.18);
+		border: 1px solid rgba(164, 120, 100, 0.18);
 		border-radius: var(--radius);
 		padding: 1.5rem;
 		transition: all 0.3s ease;
 	}
 
 	.prop-card:hover {
-		border-color: rgba(170, 145, 60, 0.45);
+		border-color: rgba(164, 120, 100, 0.45);
 		transform: translateY(-2px);
 		box-shadow: var(--shadow);
 	}
@@ -732,11 +743,12 @@
 
 	.prop-card h3 {
 		font-family: var(--font-display);
-		font-size: 1.25rem;
-		font-style: italic;
-		font-weight: 600;
-		color: var(--accent-bright);
-		margin-bottom: 0.5rem;
+		font-size: 1.4rem;
+		font-weight: 400;
+		letter-spacing: -0.005em;
+		line-height: 1.15;
+		color: var(--ink);
+		margin-bottom: 0.6rem;
 	}
 
 	.prop-card p {
@@ -748,7 +760,7 @@
 
 	.prop-card-soft {
 		background: var(--card-soft);
-		border-color: rgba(122, 138, 106, 0.2);
+		border-color: rgba(164, 120, 100, 0.2);
 	}
 
 	.prop-card-mystic {
@@ -757,7 +769,7 @@
 			var(--card) 0%,
 			var(--card-soft) 100%
 		);
-		border-color: rgba(122, 138, 106, 0.3);
+		border-color: rgba(164, 120, 100, 0.3);
 		position: relative;
 	}
 
@@ -775,25 +787,26 @@
 		display: flex;
 		gap: 1.25rem;
 		padding: 1.25rem 0;
-		border-bottom: 1px solid rgba(122, 138, 106, 0.08);
+		border-bottom: 1px solid rgba(164, 120, 100, 0.08);
 	}
 
 	.usage-num {
 		font-family: var(--font-display);
-		font-size: 1.5rem;
-		font-style: italic;
-		color: var(--accent-hue);
+		font-size: 1.8rem;
+		font-weight: 400;
+		color: var(--accent);
 		flex-shrink: 0;
 		min-width: 2.5rem;
+		line-height: 1;
 	}
 
 	.usage-body h3 {
 		font-family: var(--font-display);
-		font-size: 1.15rem;
-		font-style: italic;
-		font-weight: 600;
-		color: var(--accent-bright);
-		margin-bottom: 0.3rem;
+		font-size: 1.25rem;
+		font-weight: 400;
+		letter-spacing: -0.005em;
+		color: var(--ink);
+		margin-bottom: 0.35rem;
 	}
 
 	.usage-body p {
@@ -830,9 +843,8 @@
 
 	.warning-card h3 {
 		font-family: var(--font-display);
-		font-size: 1.1rem;
-		font-style: italic;
-		font-weight: 600;
+		font-size: 1.2rem;
+		font-weight: 400;
 		color: var(--ink);
 		margin-bottom: 0.25rem;
 	}
@@ -859,7 +871,7 @@
 
 	.storage-card {
 		background: var(--card);
-		border: 1px solid rgba(170, 145, 60, 0.18);
+		border: 1px solid rgba(164, 120, 100, 0.18);
 		border-radius: var(--radius);
 		padding: 1.75rem;
 	}
@@ -871,9 +883,9 @@
 
 	.storage-card h3 {
 		font-family: var(--font-display);
-		font-size: 1.3rem;
-		font-style: italic;
-		color: var(--accent-bright);
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: var(--ink);
 		margin-bottom: 0.5rem;
 	}
 
@@ -886,7 +898,7 @@
 
 	.info-card {
 		background: var(--card);
-		border: 1px solid rgba(122, 138, 106, 0.18);
+		border: 1px solid rgba(164, 120, 100, 0.18);
 		border-radius: var(--radius);
 		padding: 0.5rem 1.5rem;
 		margin: 0;
@@ -897,7 +909,7 @@
 		justify-content: space-between;
 		gap: 1rem;
 		padding: 1rem 0;
-		border-bottom: 1px solid rgba(122, 138, 106, 0.1);
+		border-bottom: 1px solid rgba(164, 120, 100, 0.1);
 	}
 
 	.info-row:last-child {
@@ -905,11 +917,14 @@
 	}
 
 	.info-row dt {
-		font-family: var(--font-display);
-		font-style: italic;
+		font-family: var(--font-body);
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
 		color: var(--ink-muted);
-		font-size: 0.95rem;
 		margin: 0;
+		align-self: center;
 	}
 
 	.info-row dd {
@@ -922,18 +937,19 @@
 
 	.manufacturer {
 		background: var(--card-soft);
-		border: 1px solid rgba(122, 138, 106, 0.2);
+		border: 1px solid rgba(164, 120, 100, 0.2);
 		border-radius: var(--radius);
 		padding: 1.5rem 1.75rem;
 		text-align: center;
 	}
 
 	.manufacturer h3 {
-		font-family: var(--font-display);
-		font-size: 0.85rem;
-		letter-spacing: 0.24em;
+		font-family: var(--font-body);
+		font-weight: 500;
+		font-size: 0.72rem;
+		letter-spacing: 0.28em;
 		text-transform: uppercase;
-		color: var(--accent-hue);
+		color: var(--accent);
 		margin-bottom: 0.75rem;
 	}
 

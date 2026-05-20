@@ -54,7 +54,7 @@
 <section class="hero">
 	<div class="hero-inner">
 		<span class="eyebrow">эфирные масла · ручная коллекция</span>
-		<h1>Аромат природы<br /><em>в каждой капле</em></h1>
+		<h1>Аромат природы <span class="h1-accent">в каждой капле</span></h1>
 		<p class="lede">
 			Чистые эфирные масла прямой паровой дистилляции. Каждое масло — это история растения,
 			его свойств, традиций применения и энергетики.
@@ -129,13 +129,13 @@
 							/>
 							<text
 								x="50"
-								y="58"
+								y="55"
 								text-anchor="middle"
-								font-family="Cormorant Garamond, serif"
-								font-style="italic"
-								font-size="14"
+								font-family="Inter, sans-serif"
+								font-size="9"
+								letter-spacing="2"
 								fill="currentColor"
-								opacity="0.5">скоро</text
+								opacity="0.55">SOON</text
 							>
 						</svg>
 					</div>
@@ -182,16 +182,17 @@
 	}
 
 	.hero h1 {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		line-height: 1.05;
+		font-family: var(--font-display);
+		font-size: clamp(3rem, 7vw, 5.5rem);
+		line-height: 1;
+		letter-spacing: -0.02em;
 		color: var(--ink);
-		margin-bottom: 1.5rem;
+		margin: 0 0 1.5rem;
+		font-weight: 400;
 	}
 
-	.hero h1 em {
-		font-style: italic;
-		font-weight: 400;
-		color: var(--accent-bright);
+	.hero h1 .h1-accent {
+		color: var(--accent);
 	}
 
 	.lede {
@@ -221,20 +222,20 @@
 	}
 
 	.btn-primary {
-		background: var(--accent-bright);
-		color: #fff;
-		border: 1px solid var(--accent-bright);
+		background: var(--ink);
+		color: var(--bg);
+		border: 1px solid var(--ink);
 	}
 
 	.btn-primary:hover {
-		background: #4a5c39;
-		border-color: #4a5c39;
-		color: #fff;
+		background: var(--accent-bright);
+		border-color: var(--accent-bright);
+		color: var(--bg);
 		transform: translateY(-1px);
 	}
 
 	.btn-ghost {
-		border: 1px solid rgba(122, 138, 106, 0.35);
+		border: 1px solid rgba(164, 120, 100, 0.35);
 		color: var(--ink);
 	}
 
@@ -275,9 +276,12 @@
 	}
 
 	.section-head h2 {
-		font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+		font-family: var(--font-display);
+		font-size: clamp(2rem, 4vw, 2.8rem);
+		font-weight: 400;
+		letter-spacing: -0.01em;
 		color: var(--ink);
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.section-head p {
@@ -294,7 +298,7 @@
 
 	.card {
 		background: var(--card);
-		border: 1px solid rgba(122, 138, 106, 0.18);
+		border: 1px solid var(--border);
 		border-radius: var(--radius-lg);
 		padding: 2rem 1.75rem;
 		color: var(--ink);
@@ -308,7 +312,7 @@
 
 	.card:not(.card-disabled):hover {
 		background: var(--card-hover);
-		border-color: rgba(122, 138, 106, 0.4);
+		border-color: rgba(164, 120, 100, 0.4);
 		transform: translateY(-3px);
 		box-shadow: var(--shadow);
 	}
@@ -347,13 +351,13 @@
 
 	.deity {
 		text-align: center;
-		font-family: var(--font-display);
-		font-style: italic;
-		font-size: 0.8rem;
-		letter-spacing: 0.24em;
+		font-family: var(--font-body);
+		font-size: 0.7rem;
+		font-weight: 500;
+		letter-spacing: 0.32em;
 		text-transform: uppercase;
 		color: var(--accent);
-		margin: 0 0 0.25rem;
+		margin: 0 0 0.5rem;
 	}
 
 	.deity.muted {
@@ -361,9 +365,13 @@
 	}
 
 	.card h3 {
-		font-size: 1.5rem;
+		font-family: var(--font-display);
+		font-size: 1.85rem;
+		font-weight: 400;
+		letter-spacing: -0.01em;
 		color: var(--ink);
 		text-align: center;
+		margin: 0;
 	}
 
 	.card .latin,
@@ -372,9 +380,10 @@
 	}
 
 	.card .latin {
-		font-style: italic;
+		font-family: var(--font-body);
+		font-size: 0.78rem;
 		color: var(--ink-muted);
-		font-size: 0.9rem;
+		letter-spacing: 0.04em;
 		margin: 0;
 	}
 
@@ -397,7 +406,7 @@
 		font-size: 0.72rem;
 		padding: 0.25rem 0.7rem;
 		border-radius: 999px;
-		background: rgba(122, 138, 106, 0.12);
+		background: rgba(164, 120, 100, 0.12);
 		color: var(--ink-soft);
 		letter-spacing: 0.04em;
 	}
@@ -413,6 +422,5 @@
 
 	.card-arrow.muted {
 		color: var(--ink-muted);
-		font-style: italic;
 	}
 </style>
